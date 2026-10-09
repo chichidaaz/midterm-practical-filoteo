@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #fffaf6;
+  color: #1d2818;
+  font-family: "DM Mono", monospace;
+}
+
+.name {
+  min-height: 680px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(29, 40, 24, 0.25), rgba(29, 40, 24, 0.25)),
+    url("assets/1.png") center / cover;
+}
+
+.logo {
+  display: block;
+  padding: 16px;
+  color: #fffaf6;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Anton", sans-serif;
+  font-size: 35px;
+  letter-spacing: 0.04em;
+}
+
+.navbar {
+  display: flex;
+  background-color: #f5dbe9;
+  border-top: 1px solid #3b4331;
+  border-bottom: 1px solid #3b4331;
+}
+
+.navbar a {
+  flex: 1;
+  padding: 13px 6px;
+  border-right: 1px solid #3b4331;
+  color: #1d2818;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar a:last-child {
+  border-right: none;
+}
+
+.navbar a:hover {
+  background-color: #e6e78f;
+}
+
+.namecontent {
+  min-height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.namecontent h1 {
+  margin: 0;
+  color: #fffaf6;
+  font-family: "Anton", sans-serif;
+  font-size: 256px;
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.02em;
+}
+
+.namedescription {
+  max-width: 280px;
+  margin: 32px 0 16px;
+  padding: 6px 8px;
+  background-color: #f5dbe9;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.namebutton,
+.filledbutton {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid #fffaf6;
+  border-radius: 99px;
+  background-color: #fffaf6;
+  color: #1d2818;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.namebutton:hover,
+.filledbutton:hover {
+  transform: translateY(-3px);
+  background-color: #e6e78f;
+}
+
+.marquee {
+  overflow: hidden;
+  border-bottom: 1px solid #3b4331;
+  background-color: #e6e78f;
+  white-space: nowrap;
+}
+
+.marqueetrack {
+  display: inline-block;
+  padding: 5px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 51px;
+  line-height: 1;
+  animation: move-text 18s linear infinite;
+}
+
+@keyframes move-text {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 128px;
+}
+
+.intro h2,
+footer h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: 144px;
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.025em;
+}
+
+.introtext {
+  max-width: 360px;
+}
+
+.introtext p,
+.textcard p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.outlinebutton {
+  display: inline-block;
+  margin-top: 19px;
+  padding: 13px 29px;
+  border: 1px solid #3b4331;
+  border-radius: 99px;
+  color: #1d2818;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.outlinebutton:hover {
+  background-color: #e6e78f;
+}
+
+.projectgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 32px 80px;
+}
+
+.projectcard {
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid #3b4331;
+  border-radius: 22px;
+}
+
+.imagecard {
+  position: relative;
+  background-color: #f5dbe9;
+}
+
+.imagecard img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.projectinfo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background: rgba(255, 250, 246, 0.92);
+}
+
+.projectinfo p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.projectinfo h3 {
+  margin: 3px 0 0;
+  font-family: "Anton", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.quotecard {
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background-color: #f5dbe9;
+  text-align: center;
+}
+
+.quotecard h3 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.textcard {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  background-color: #f7e7ee;
+}
+
+.skillssection {
+  padding: 128px;
+  border-top: 1px solid #3b4331;
+  background-color: #e6e78f;
+}
+
+.sectionlabel {
+  margin: 0 0 24px;
+  font-size: 11px;
+}
+
+.skillstable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.skillstable th {
+  padding: 0 12px 12px 0;
+  border-bottom: 1px solid #3b4331;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.skillstable th:last-child,
+.skillstable td:last-child {
+  width: 25%;
+  padding-left: 12px;
+}
+
+.skillstable td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid #3b4331;
+}
+
+.skillstable tbody td:first-child {
+  font-family: "Anton", sans-serif;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.skillstable tbody td:last-child {
+  font-size: 12px;
+}
+
+footer {
+  padding: 128px;
+  background: #1d2818 url("assets/Charlize (1).png") center / cover no-repeat;
+  color: #fffaf6;
+}
+
+.footermail {
+  display: inline-block;
+  margin-top: 32px;
+  color: #e6e78f;
+  font-family: "Anton", sans-serif;
+  font-size: 48px;
+  text-decoration: none;
+}
+
+.footerform {
+  display: grid;
+  gap: 10px;
+  max-width: 480px;
+  margin-top: 32px;
+}
+
+.footerform label {
+  font-size: 11px;
+}
+
+.footerform input,
+.footerform textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #fffaf6;
+  border-radius: 0;
+  background-color: #fffaf6;
+  color: #1d2818;
+  font: inherit;
+}
+
+.footerform textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.footerform button {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 11px 22px;
+  border: 1px solid #e6e78f;
+  background-color: #e6e78f;
+  color: #1d2818;
+  font: inherit;
+  cursor: pointer;
+}
+
+.footerform button:hover {
+  background-color: #f5dbe9;
+  border-color: #f5dbe9;
+}
+
+.sociallinks {
+  display: flex;
+  gap: 16px;
+  margin: 48px 0 16px;
+}
+
+.sociallinks a {
+  color: #fffaf6;
+  font-size: 11px;
+}
+
+footer > p {
+  margin: 0;
+  font-size: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 767.99px) {
+  .name {
+    min-height: 500px;
+  }
+
+  .logo {
+    padding: 12px 8px;
+    font-size: 19px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar a {
+    min-width: 0;
+    padding: 11px 2px;
+    font-size: 11px;
+  }
+
+  .namecontent {
+    min-height: 390px;
+    padding: 40px 16px;
+  }
+
+  .namecontent h1 {
+    max-width: 100%;
+    font-size: 88px;
+  }
+
+  .marqueetrack {
+    font-size: 30px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 48px 24px;
+  }
+
+  .intro h2,
+  footer h2 {
+    font-size: 56px;
+  }
+
+  .projectgrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px 48px;
+  }
+
+  .projectcard {
+    min-height: 260px;
+  }
+
+  .quotecard h3 {
+    font-size: 34px;
+  }
+
+  .skillssection,
+  footer {
+    padding: 48px 20px;
+  }
+
+  .skillstable tbody td:first-child {
+    font-size: 21px;
+  }
+
+  .skillstable th:last-child,
+  .skillstable td:last-child {
+    width: 30%;
+    padding-left: 6px;
+  }
+
+  .skillstable td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footermail {
+    max-width: 100%;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .footerform {
+    width: 100%;
+  }
+
+  .sociallinks {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sociallinks a {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.99px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .namecontent h1 {
+    font-size: 168px;
+  }
+
+  .intro,
+  .skillssection,
+  footer {
+    padding: 56px 48px;
+  }
+
+  .intro {
+    gap: 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro h2,
+  footer h2 {
+    font-size: 72px;
+  }
+
+  .projectgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 24px 56px;
+  }
+
+  .projectcard {
+    min-height: 300px;
+  }
+
+  .textcard {
+    grid-column: 1 / -1;
+  }
+
+  .quotecard h3 {
+    font-size: 36px;
+  }
+
+  .skillstable tbody td:first-child {
+    font-size: 34px;
+  }
+
+  .footermail {
+    max-width: 100%;
+    font-size: 34px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .namecontent h1 {
+    font-size: 228px;
+  }
+
+  .intro,
+  .skillssection,
+  footer {
+    padding: 80px;
+  }
+
+  .intro h2,
+  footer h2 {
+    font-size: 108px;
+  }
+
+  .projectgrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .textcard {
+    grid-column: auto;
+  }
+
+  .quotecard h3 {
+    font-size: 42px;
+  }
+
+  .skillstable tbody td:first-child {
+    font-size: 42px;
+  }
+}
